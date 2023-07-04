@@ -1,0 +1,27 @@
+:root {
+
+    --primary-color: #2563eb;
+    --color-white: #ffffff;
+
+}
+
+
+.navbar {
+
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    border: 1px solid black;
+    padding: 10px;
+    position: sticky;
+    z-index: 999;
+    border-end-start-radius: 15px;
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.navbar button {
+
+    padding: 0 10px;
+}
