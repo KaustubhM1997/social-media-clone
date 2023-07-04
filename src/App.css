@@ -1,4 +1,30 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Montserrat:wght@400;500&family=Noto+Sans&family=Open+Sans:ital@1&family=Oswald:wght@400;500&display=swap');
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+:root {
+
+  --primary-color: #2563eb;
+  --color-white: #ffffff;
+
+}
+.main-app {
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +61,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
