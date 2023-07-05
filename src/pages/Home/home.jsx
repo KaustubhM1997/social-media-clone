@@ -1,12 +1,23 @@
+import { Routes, Route, NavLink } from "react-router-dom";
+
 import "./home.css";
+import Login from "../Login/login";
 export default function Home() {
   return (
     <>
       {/* nav component */}
+
+      <NavLink to="/login">Login</NavLink>
+      <NavLink to="/"></NavLink>
+
+      <Routes>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
       <nav className="navbar">
         <p className="nav-header">SocialNetwork</p>
 
-        <a className="nav-element" href="#">
+        <a className="nav-element" href="login.jsx">
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
       </nav>
