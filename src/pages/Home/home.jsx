@@ -72,7 +72,7 @@ export default function Home() {
           <div className="side-bar-container">
             <img></img>
             <p>User's name</p>
-            <button>Follow</button>
+            <button>Follow Me</button>
           </div>
         </div>
       </div>
