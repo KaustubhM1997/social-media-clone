@@ -21,7 +21,7 @@
     border: 1px solid black;
     height: 100vh;
     max-width: 650px;
-    background-color: #eff6ff;
+    background-color: var(--secondary-color);
     
 
 
@@ -50,13 +50,27 @@
     
 }
 
-.info-container button {
+.button-text {
 
-    max-width: 100px;
     align-self: center;
     margin-top: 8rem;
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--color-white);
+    background-color: var(--primary-color);
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    
 }
 
+.info-container .redirect {
+
+    align-self: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+
+
+}
 

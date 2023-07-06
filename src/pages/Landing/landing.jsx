@@ -11,9 +11,13 @@ export default function Landing() {
           share great stories with one another.
         </p>
 
-        <button>Socialize Now</button>
+        <a className="button-text" href="/home">
+          Socialize Now
+        </a>
 
-        <p>Already have an account?</p>
+        <a className="redirect" href="/login">
+          Already have an account?
+        </a>
 
         {/* <div className="items-container">
           <p>
