@@ -1,8 +1,8 @@
 
-*{
+/* * {
 
     margin: 0.2rem;
-}
+} */
 
 
 .login-container {
@@ -21,8 +21,11 @@
     gap: 1rem;
     box-shadow: 4px 6px 8px rgba(0,0,0,0.1);
     height: 80vh;
+    /* margin: 0.2rem; */
+    /* margin-left: 5rem; */
+  
     
-    
+
   }
   
   .field-container {

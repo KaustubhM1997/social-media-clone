@@ -1,0 +1,10 @@
+.landing-header-login {
+
+    font-weight: bolder;
+    font-size: 48px;
+    cursor: pointer;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 2rem;
+
+  }

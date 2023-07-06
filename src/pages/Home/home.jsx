@@ -1,81 +1,39 @@
 import "./home.css";
 import Login from "../Login/login";
+import SideBar1 from "../../components/SideBar1";
+import SideBar2 from "../../components/SideBar2";
+import NavBar from "../../components/NavBar";
 export default function Home() {
   return (
     <>
-      <nav className="navbar">
-        <p className="nav-header">SocialNetwork</p>
-
-        <a className="nav-element" href="login.jsx">
-          <i class="fa-solid fa-right-from-bracket"></i>
-        </a>
-      </nav>
+      {/* NavBar component */}
+      <NavBar />
 
       {/* Sidebar components */}
 
       <div className="main-container">
-        <div className="side-bar">
-          <div className="filling">
-            <div className="side-bar-container">
-              <i className="side-bar-icon" class="fa-solid fa-house"></i>
+        <SideBar1 />
 
-              <p>Home</p>
-            </div>
-            <div className="side-bar-container">
-              <i className="side-bar-icon" class="fa-solid fa-compass"></i>
-              <p>Explore</p>
-            </div>
-            <div className="side-bar-container">
-              <i className="side-bar-icon" class="fa-solid fa-bookmark"></i>
-              <p>Bookmarks</p>
-            </div>
-            <div className="side-bar-container">
-              <i className="side-bar-icon" class="fa-solid fa-user"></i>
-              <p>Profile</p>
-            </div>
-            <div className="side-bar-container">
-              <i class="fa-solid fa-plus"></i>
-              <button>Create Post</button>
-            </div>
-          </div>
-        </div>
-
-        <div className="side-bar">
-          <div className="side-bar-container">
-            <input
-              className="search-user"
-              type="search"
-              placeholder="Search Posts & People"
-            />
-          </div>
-
-          <div className="side-bar-container">
-            <p className="suggested-users">Whom to follow</p>
-          </div>
-
-          {/* This data needs to come dynamically from the backend */}
-          <div className="side-bar-container">
-            <img></img>
-            <p>User's name</p>
-            <button>Follow</button>
-          </div>
-          <div className="side-bar-container">
-            <img></img>
-            <p>User's name</p>
-            <button>Follow</button>
-          </div>
-          <div className="side-bar-container">
-            <img></img>
-            <p>User's name</p>
-            <button>Follow</button>
-          </div>
-          <div className="side-bar-container">
-            <img></img>
-            <p>User's name</p>
-            <button>Follow Me</button>
-          </div>
-        </div>
+        <SideBar2 />
       </div>
     </>
   );
 }
+
+// AXIOS GET PRACTICE
+
+// useEffect(() => {
+//   const getData = async () => {
+//     try {
+//       const res = await axios.get("/api/posts");
+
+//       if (res.status === 200) {
+//         console.log(res);
+//       }
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   };
+
+//   getData();
+// }, []);

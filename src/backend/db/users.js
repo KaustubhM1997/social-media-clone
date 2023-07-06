@@ -5,6 +5,8 @@ import { formatDate } from "../utils/authUtils";
  * You can add default users of your wish with different attributes
  * */
 
+//PUT ALL THE IMAGES HERE AS CONST == AND THEN JUST USE THE NAME BELOW IN AVATARS
+
 export const users = [
   {
     _id: uuid(),

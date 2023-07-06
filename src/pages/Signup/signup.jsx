@@ -1,7 +1,9 @@
+import "./signup.css";
+
 export default function Signup() {
   return (
     <>
-      <h1>This is the Signup page</h1>
+      <p className="landing-header-login">SocialNetwork</p>
     </>
   );
 }

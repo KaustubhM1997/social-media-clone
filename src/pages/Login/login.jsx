@@ -1,5 +1,12 @@
+// import { useEffect } from "react";
+
+// import axios from "axios";
+
+import { useNavigate } from "react-router-dom";
 import "./login.css";
 export default function Login() {
+  const navigate = useNavigate();
+
   return (
     <>
       <p className="landing-header-login">SocialNetwork</p>
@@ -20,9 +27,11 @@ export default function Login() {
         </div>
 
         <div className="btn-container">
-          <button>Login</button>
+          <button onClick={() => navigate("/explore")}>Login</button>
           <button>Guest Login</button>
-          <p className="link-text">Create New Account?</p>
+          <p className="link-text" onClick={() => navigate("/signup")}>
+            Create New Account?
+          </p>
         </div>
       </div>
     </>
