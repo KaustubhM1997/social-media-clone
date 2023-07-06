@@ -5,6 +5,19 @@ import { formatDate } from "../utils/authUtils";
  * You can add default users of your wish with different attributes
  * */
 
+const adarsh =
+  "https://www.pexels.com/photo/a-young-student-in-a-classroom-5211478/";
+const lewis =
+  "https://cdn-4.motorsport.com/images/mgl/0mb95oa2/s200/lewis-hamilton-mercedes-1.webp";
+
+const cristiano =
+  "https://b.fssta.com/uploads/application/soccer/headshots/885.vresize.350.350.medium.14.png";
+
+const virat =
+  "https://upload.wikimedia.org/wikipedia/commons/7/7e/Virat_Kohli.jpg";
+
+const djoko =
+  "https://pbs.twimg.com/profile_images/1219965365226065920/EBF8Rd9v_400x400.jpg";
 //PUT ALL THE IMAGES HERE AS CONST == AND THEN JUST USE THE NAME BELOW IN AVATARS
 
 export const users = [
@@ -18,7 +31,7 @@ export const users = [
     updatedAt: formatDate(),
     bio: "say my name!",
     website: "https://kaustubh-m.netlify.app/",
-    avatar: "",
+    avatar: adarsh,
   },
   {
     _id: uuid(),
@@ -30,7 +43,7 @@ export const users = [
     updatedAt: formatDate(),
     bio: "8 time world champion",
     website: "https://www.linkedin.com/in/kaustubh-manglurkar-871ba0167/",
-    avatar: "",
+    avatar: lewis,
   },
   {
     _id: uuid(),
@@ -42,7 +55,7 @@ export const users = [
     updatedAt: formatDate(),
     bio: "The best football player",
     website: "https://dev.to/kaustubhmanglu1",
-    avatar: "",
+    avatar: cristiano,
   },
   {
     _id: uuid(),
@@ -54,7 +67,7 @@ export const users = [
     updatedAt: formatDate(),
     bio: "The most popular crickter",
     website: "https://twitter.com/KaustubhManglu1",
-    avatar: "",
+    avatar: virat,
   },
   {
     _id: uuid(),
@@ -66,6 +79,6 @@ export const users = [
     updatedAt: formatDate(),
     bio: "The best every tennis player",
     website: "https://github.com/KaustubhM1997",
-    avatar: "",
+    avatar: djoko,
   },
 ];

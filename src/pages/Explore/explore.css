@@ -2,8 +2,57 @@
 
 .explore-container{
 
-    border: 1px solid black;
-    width: 500px;
+    /* border: 1px solid black; */
+    width: 550px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    
+}
 
+
+
+
+.card-container {
+
+    /* border: 1px solid black; */
+    width: 100%;
+    height: fit-content;
+    box-shadow: -3px 1px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 2rem;
+}
+
+.flex-cont {
+
+    display: flex;
+    gap: 1rem;
+}
+
+.row-1{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-2 {
+
+    text-align: left;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.row-3 {
+
+   
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    
+}
+
+.row-3 i {
+    font-size: 1.1rem;
 
 }

@@ -20,6 +20,7 @@
     border-end-start-radius: 15px;
     background-color: var(--primary-color);
     border: none;
+    flex-grow: 1;
 }
 
 .nav-element {
