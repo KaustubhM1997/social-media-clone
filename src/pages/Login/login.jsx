@@ -5,7 +5,7 @@
 import { useContext } from "react";
 
 import { AuthContext } from "../../contexts/AuthContext";
-import "./login.css";
+import "./Login.css";
 
 export default function Login() {
   const { navigate } = useContext(AuthContext);

@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import NavBar from "../../components/NavBar";
 import SideBar1 from "../../components/SideBar1";
 import SideBar2 from "../../components/SideBar2";
-import "./explore.css";
+import "./Explore.css";
 import { AuthContext } from "../../contexts/AuthContext";
 
 // const response = await axios.post(

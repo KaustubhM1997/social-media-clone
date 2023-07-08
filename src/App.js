@@ -4,9 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Landing from "./pages/Landing/Landing";
 import Home from "./pages/Home/Home";
-import Login from "./pages/Login/login";
+
 import Signup from "./pages/Signup/Signup";
-import Explore from "./pages/Explore/explore";
+import Explore from "./pages/Explore/Explore";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
