@@ -15,12 +15,15 @@
     /* flex-direction: column; */
     border: 1px solid black;
     padding: 28px;
-    position: sticky;
-    z-index: 999;
+    /* position: fixed;
+    top: 0; */
+    /* position: sticky;
+    z-index: 999; */
     border-end-start-radius: 15px;
     background-color: var(--primary-color);
     border: none;
     flex-grow: 1;
+    width: 100%;
 }
 
 .nav-element {
@@ -43,8 +46,7 @@
     min-width: 250px;
     height: 100vh;
     margin-top: 1rem; 
-     
-  
+    /* position: fixed; */   
 }
 
 .side-bar .filling {
@@ -52,13 +54,26 @@
     margin-top: 2.5rem;
 }
 
-.side-bar-container {
+.side-bar-container, .side-bar-container-2 {
 
     display: flex;
     padding: 16px;
     justify-content: space-evenly;
     cursor: pointer;
-    
+}
+
+.side-bar-container-2 {
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.sidebar2-align {
+
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .side-bar p {
@@ -75,6 +90,14 @@
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.side-bar-container-2 img {
+
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
 }
 
 

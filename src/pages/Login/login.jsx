@@ -31,7 +31,7 @@ export default function Login() {
 
         <div className="btn-container">
           <button onClick={() => navigate("/explore")}>Login</button>
-          <button>Guest Login</button>
+          <button onClick={() => navigate("/home")}>Guest Login</button>
           <p className="link-text" onClick={() => navigate("/signup")}>
             Create New Account?
           </p>

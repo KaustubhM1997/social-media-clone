@@ -1,10 +1,16 @@
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
+
 export default function NavBar() {
+  const { navigate } = useContext(AuthContext);
   return (
     <>
       <nav className="navbar">
-        <p className="nav-header">SocialNetwork</p>
+        <p onClick={() => navigate("/home")} className="nav-header">
+          SocialNetwork
+        </p>
 
-        <a className="nav-element" href="login.jsx">
+        <a onClick={() => navigate("/")} className="nav-element">
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
       </nav>

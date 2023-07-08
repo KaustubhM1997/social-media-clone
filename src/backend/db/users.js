@@ -6,18 +6,16 @@ import { formatDate } from "../utils/authUtils";
  * */
 
 const adarsh =
-  "https://www.pexels.com/photo/a-young-student-in-a-classroom-5211478/";
-const lewis =
-  "https://cdn-4.motorsport.com/images/mgl/0mb95oa2/s200/lewis-hamilton-mercedes-1.webp";
+  "https://img.freepik.com/free-photo/red-haired-lady-eyeglasses-holds-books-shows-ok-sign_197531-23789.jpg?w=740&t=st=1688843699~exp=1688844299~hmac=15305f1447dfa414cd23106dcdb47ff248b1ae6502928aac1740b9e87a23bf9a";
 
-const cristiano =
-  "https://b.fssta.com/uploads/application/soccer/headshots/885.vresize.350.350.medium.14.png";
+const shubham =
+  "https://www.parentmap.com/images/article/9390/Avvo-drug-test-teen-istock.jpg";
 
 const virat =
   "https://upload.wikimedia.org/wikipedia/commons/7/7e/Virat_Kohli.jpg";
 
-const djoko =
-  "https://pbs.twimg.com/profile_images/1219965365226065920/EBF8Rd9v_400x400.jpg";
+const chandler =
+  "https://images.entertainment.ie/uploads/2021/05/28131615/Chandler-Bing-Friends-Matthew-Perry.jpg?w=640&h=384&q=high";
 
 export const users = [
   {
@@ -28,35 +26,22 @@ export const users = [
     password: "adarshBalika123",
     createdAt: formatDate(),
     updatedAt: formatDate(),
-    bio: "say my name!",
+    bio: "An ideal student possesses a remarkable combination of qualities that enable them to excel both academically and personally. They serve as a source of inspiration for their peers and are admired by teachers and parents alike.",
     website: "https://kaustubh-m.netlify.app/",
     avatar: adarsh,
     isFollowing: false,
   },
   {
     _id: uuid(),
-    firstName: "Lewis",
-    lastName: "Hamilton",
-    username: "lewishamilton",
-    password: "lewisHamiltion",
+    firstName: "Shubham",
+    lastName: "Soni",
+    username: "shubhamsoni",
+    password: "shubhamsoni",
     createdAt: formatDate(),
     updatedAt: formatDate(),
-    bio: "8 time world champion",
+    bio: "Nestled in a picturesque valley, a verdant landscape stretches as far as the eye can see. Rolling hills, adorned with a patchwork quilt of emerald-green fields, gently sway in the soft breeze.",
     website: "https://www.linkedin.com/in/kaustubh-manglurkar-871ba0167/",
-    avatar: lewis,
-    isFollowing: true,
-  },
-  {
-    _id: uuid(),
-    firstName: "Cristiano",
-    lastName: "Ronaldo",
-    username: "cristiano7",
-    password: "cristianoRonaldo",
-    createdAt: formatDate(),
-    updatedAt: formatDate(),
-    bio: "The best football player",
-    website: "https://dev.to/kaustubhmanglu1",
-    avatar: cristiano,
+    avatar: shubham,
     isFollowing: true,
   },
   {
@@ -67,22 +52,22 @@ export const users = [
     password: "ViratKohli",
     createdAt: formatDate(),
     updatedAt: formatDate(),
-    bio: "The most popular crickter",
+    bio: "An ideal student possesses a remarkable combination of qualities that enable them to excel both academically and personally. They serve as a source of inspiration for their peers and are admired by teachers and parents alike.",
     website: "https://twitter.com/KaustubhManglu1",
     avatar: virat,
     isFollowing: false,
   },
   {
     _id: uuid(),
-    firstName: "Noval",
-    lastName: "Djokovic",
-    username: "Djoker",
-    password: "NovakDjoko23",
+    firstName: "Chandler",
+    lastName: "Bing",
+    username: "chandlerbing",
+    password: "bingc",
     createdAt: formatDate(),
     updatedAt: formatDate(),
-    bio: "The best every tennis player",
+    bio: "An ideal student possesses a remarkable combination of qualities that enable them to excel both academically and personally. They serve as a source of inspiration for their peers and are admired by teachers and parents alike.",
     website: "https://github.com/KaustubhM1997",
-    avatar: djoko,
+    avatar: chandler,
     isFollowing: true,
   },
 ];

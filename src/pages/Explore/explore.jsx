@@ -38,19 +38,18 @@ export default function Explore() {
   //   }
   // };
 
-  //STEP 1--> CREATE DATA CONTEXT WHERE ALL THE DATA WILL BE THERE //DONE
-  // STEP 2 --> CREATE ALL THIS IN DATA CONTEXT AND THEN MOVE IT ALL AROUND //DONE
-  // STEP 3 --> CHANGE ALL FILE NAMES TO STARTING WITH CAPS //DONE
-  //STEP 4 --> MAP POSTS DATA ON EXPLORE PAGE AND NOT USERS DATA //DONE
-  // STEP 5 --> CREATE A COMPONENT FOR THE CARD
+  // //FUNCTION TO FILTER USERS I'M NOT FOLLOWING
+
+  // const followedUsers = posts.filter(
+  //   ({ isFollowing }) => isFollowing === false
+  // );
+
   return (
     <>
       <NavBar />
 
       <div className="main-container">
         <SideBar1 />
-
-        {/* FETCHING DATA FROM BACKEND AND MAPPING HERE FOR EXPLORE */}
 
         {/* PASSING POST ITEMS TO THE CARD COMPONENT AS A PROP */}
 

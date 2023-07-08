@@ -9,6 +9,8 @@ import PostCard from "../../components/PostCard";
 export default function Home() {
   const { posts } = useContext(DataContext);
 
+  //FUNCTION TO FILTER PEOPLE I'M NOT FOLLOWING
+
   const filteredPosts = posts.filter(({ isFollowing }) => isFollowing === true);
   return (
     <>
