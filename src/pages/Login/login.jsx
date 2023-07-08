@@ -2,10 +2,13 @@
 
 // import axios from "axios";
 
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+
+import { AuthContext } from "../../contexts/AuthContext";
 import "./login.css";
+
 export default function Login() {
-  const navigate = useNavigate();
+  const { navigate } = useContext(AuthContext);
 
   return (
     <>

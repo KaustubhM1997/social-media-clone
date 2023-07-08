@@ -1,10 +1,11 @@
 import logo from "./logo.svg";
-import "./App.css";
-import Home from "./pages/Home/home";
 import { Routes, Route } from "react-router-dom";
+
+import "./App.css";
+import Landing from "./pages/Landing/Landing";
+import Home from "./pages/Home/Home";
 import Login from "./pages/Login/login";
-import Signup from "./pages/Signup/signup";
-import Landing from "./pages/Landing/landing";
+import Signup from "./pages/Signup/Signup";
 import Explore from "./pages/Explore/explore";
 
 function App() {

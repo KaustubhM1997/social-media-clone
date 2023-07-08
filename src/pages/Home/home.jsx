@@ -1,5 +1,5 @@
-import "./home.css";
-import Login from "../Login/login";
+import "./Home.css";
+// import Login from "../Login/login";
 import SideBar1 from "../../components/SideBar1";
 import SideBar2 from "../../components/SideBar2";
 import NavBar from "../../components/NavBar";

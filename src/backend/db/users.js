@@ -18,7 +18,6 @@ const virat =
 
 const djoko =
   "https://pbs.twimg.com/profile_images/1219965365226065920/EBF8Rd9v_400x400.jpg";
-//PUT ALL THE IMAGES HERE AS CONST == AND THEN JUST USE THE NAME BELOW IN AVATARS
 
 export const users = [
   {
@@ -32,6 +31,7 @@ export const users = [
     bio: "say my name!",
     website: "https://kaustubh-m.netlify.app/",
     avatar: adarsh,
+    isFollowing: false,
   },
   {
     _id: uuid(),
@@ -44,6 +44,7 @@ export const users = [
     bio: "8 time world champion",
     website: "https://www.linkedin.com/in/kaustubh-manglurkar-871ba0167/",
     avatar: lewis,
+    isFollowing: true,
   },
   {
     _id: uuid(),
@@ -56,6 +57,7 @@ export const users = [
     bio: "The best football player",
     website: "https://dev.to/kaustubhmanglu1",
     avatar: cristiano,
+    isFollowing: true,
   },
   {
     _id: uuid(),
@@ -68,6 +70,7 @@ export const users = [
     bio: "The most popular crickter",
     website: "https://twitter.com/KaustubhManglu1",
     avatar: virat,
+    isFollowing: false,
   },
   {
     _id: uuid(),
@@ -80,5 +83,6 @@ export const users = [
     bio: "The best every tennis player",
     website: "https://github.com/KaustubhM1997",
     avatar: djoko,
+    isFollowing: true,
   },
 ];
