@@ -2,11 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
-
 import { makeServer } from "./server";
+
 import "./index.css";
 import App from "./App";
-import { AuthProvider } from "./contexts/AuthContext";
+import { AuthContext, AuthProvider } from "./contexts/AuthContext";
+import { DataContext, DataProvider } from "./contexts/DataContext";
+export { AuthContext, DataContext };
 
 // Call make Server
 makeServer();
@@ -16,8 +18,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <AuthProvider>
-        {" "}
-        <App />
+        <DataProvider>
+          <App />
+        </DataProvider>
       </AuthProvider>
     </Router>
   </React.StrictMode>

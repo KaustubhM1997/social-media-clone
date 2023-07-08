@@ -1,13 +1,14 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import Landing from "./pages/Landing/Landing";
 import Home from "./pages/Home/Home";
-
+import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Explore from "./pages/Explore/Explore";
-import Login from "./pages/Login/Login";
+import Bookmark from "./pages/Bookmark/Bookmark";
+import UserProfile from "./pages/UserProfile/UserProfile";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/explore" element={<Explore />} />
+        <Route path="/bookmarks" element={<Bookmark />} />
+        <Route path="/profile" element={<UserProfile />} />
       </Routes>
     </div>
   );
