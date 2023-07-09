@@ -21,7 +21,10 @@ export default function Login() {
 
   const handleChange = (e) => {
     const { value, id } = e.target;
-    setUser((previousState) => ({ ...previousState, [id]: value })); //DYNAMIC IDs for username and password
+    console.log(value, id, "searching...");
+    setUser((prevState) => ({ ...prevState, [id]: value }));
+
+    // setUser((previousState) => ({ ...previousState, [id]: value })); //DYNAMIC IDs for username and password
   };
 
   //FUNCTION TO HANDLE GUEST AND NEW USERS TRYING TO LOG IN
@@ -29,10 +32,14 @@ export default function Login() {
   const submitHandler = (type) => {
     if (type === "not a guest") {
       if (user.username !== "" && user.password !== "") {
+        //user fills in details to login and we call the checkuser function
         checkUser();
-      } else if (type === "guest") {
-        guestLogin();
+      } else {
+        alert("Please fill in your login credentials");
       }
+    } else {
+      //when the user logs in as a guest
+      guestLogin();
     }
   };
   return (
@@ -51,7 +58,7 @@ export default function Login() {
                 type="text"
                 required
                 value={user.username}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e)}
                 placeholder="Enter your username..."
               ></input>
             </div>
@@ -64,7 +71,7 @@ export default function Login() {
                   id="password"
                   value={user.password}
                   required
-                  onChange={handleChange}
+                  onChange={(e) => handleChange(e)}
                   placeholder="Enter your password..."
                   type={`${showPassword ? "text" : "password"}`}
                 ></input>

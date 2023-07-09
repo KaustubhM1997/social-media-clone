@@ -10,7 +10,13 @@ export default function NavBar() {
           SocialNetwork
         </p>
 
-        <a onClick={() => navigate("/")} className="nav-element">
+        <a
+          onClick={() => {
+            localStorage.removeItem("token");
+            navigate("/");
+          }}
+          className="nav-element"
+        >
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
       </nav>

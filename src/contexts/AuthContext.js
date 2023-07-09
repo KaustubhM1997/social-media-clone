@@ -20,7 +20,6 @@ export const AuthProvider = ({ children }) => {
       const response = await axios.post(`/api/auth/login`, data); // posting on the backend
 
       if (response.status === 200) {
-        // console.log(response, "FIND");
         //WE GET THE ENCODED TOKEN AND USER DETAILS HERE
         localStorage.setItem("token", response.data.encodedToken);
         localStorage.setItem("user", JSON.stringify(response.data.foundUser)); //converting object to string using stringify
@@ -76,7 +75,15 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ navigate, guestLogin, token, user, checkUser, loggendInUser }}
+      value={{
+        navigate,
+        guestLogin,
+        token,
+        user,
+        checkUser,
+        loggendInUser,
+        setUser,
+      }}
     >
       {children}
     </AuthContext.Provider>
