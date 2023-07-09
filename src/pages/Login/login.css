@@ -87,6 +87,21 @@ input::placeholder {
 
   }
 
+  /* .login-password {
+
+    display: flex;
+    justify-content: space-around;
+   
+  } */
+
+  .password-icon{
+
+    cursor: pointer;
+    /* margin-left: 0.7rem; */
+    /* font-size: 1rem;
+    margin-top: 0.5rem; */
+  }
+
 
   .btn-container {
 

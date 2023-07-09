@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  //FUNCTION TO CAPTURE/CHECK USER DETAILS AND POST ON BACKEND
+  //FUNCTION TO CAPTURE/CHECK USER DETAILS THAT ARE LOGGING IN AND POST ON BACKEND
 
   const checkUser = async () => {
     try {
@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
       const response = await axios.post(`/api/auth/login`, data);
 
       if (response.status === 200) {
-        console.log(response, "GO!!");
+        // console.log(response, "GO!!");
         localStorage.setItem("token", response.data.encodedToken);
         localStorage.setItem("user", JSON.stringify(response.data.foundUser));
         setToken(response.data.encodedToken);
