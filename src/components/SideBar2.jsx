@@ -3,8 +3,6 @@ import { DataContext } from "../contexts/DataContext";
 
 export default function SideBar2() {
   const { users } = useContext(DataContext);
-
-  console.log(users, "users");
   return (
     <>
       <div className="side-bar">
@@ -32,21 +30,6 @@ export default function SideBar2() {
             </li>
           ))}
         </div>
-        {/* <div className="side-bar-container">
-          <img></img>
-          <p>User's name</p>
-          <button>Follow</button>
-        </div>
-        <div className="side-bar-container">
-          <img></img>
-          <p>User's name</p>
-          <button>Follow</button>
-        </div>
-        <div className="side-bar-container">
-          <img></img>
-          <p>User's name</p>
-          <button>Follow</button>
-        </div> */}
       </div>
     </>
   );

@@ -9,6 +9,7 @@ import Signup from "./pages/Signup/Signup";
 import Explore from "./pages/Explore/Explore";
 import Bookmark from "./pages/Bookmark/Bookmark";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/bookmarks" element={<Bookmark />} />
         <Route path="/profile" element={<UserProfile />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

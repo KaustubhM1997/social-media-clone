@@ -6,7 +6,9 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
+  const [bookmark, setBookmark] = useState([]);
 
+  //FETCHING POSTS FROM BACKEND
   const getPosts = async () => {
     try {
       const postsData = await axios("/api/posts");
@@ -19,6 +21,7 @@ export const DataProvider = ({ children }) => {
     }
   };
 
+  //FETCHING USERS FROM BACKEND
   const getUsers = async () => {
     try {
       const usersData = await axios("/api/users");
@@ -31,9 +34,22 @@ export const DataProvider = ({ children }) => {
     }
   };
 
+  const getBookmarks = async () => {
+    try {
+      const bookmarkData = await axios(`/api/users/bookmark`);
+
+      if (bookmarkData.status === 200) {
+        console.log(bookmarkData, "bookmark");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
     getPosts();
     getUsers();
+    getBookmarks();
   }, []);
 
   return (

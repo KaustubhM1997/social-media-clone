@@ -1,0 +1,21 @@
+
+
+.notfound-container {
+    display: flex;
+   
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10rem;
+}
+
+.notfound-header {
+
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.notfound-text {
+
+    font-size: 1rem;
+}

@@ -2,10 +2,8 @@ import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
 export default function PostCard({ post }) {
-  const { id, content, firstName, lastName, createdAt } = post;
+  const { id, content, firstName, lastName, createdAt, avatar } = post;
   const { navigate } = useContext(AuthContext);
-
-  //   console.log(content, "content");
 
   return (
     <>
@@ -13,7 +11,7 @@ export default function PostCard({ post }) {
         <div className="card-container">
           <div className="row-1">
             <div className="flex-cont">
-              <img src="" alt="" />
+              <img src={avatar} alt="display photo" />
               <p>
                 {firstName} {""}
                 {lastName}
