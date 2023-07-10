@@ -90,6 +90,7 @@ export default function Login() {
           <div className="btn-container">
             {/* <button onClick={() => navigate("/explore")}>Login</button> */}
             <button
+              className="login-btn"
               onClick={(e) => {
                 e.preventDefault();
                 submitHandler("not a guest");

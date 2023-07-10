@@ -5,14 +5,7 @@ import { DataContext } from "../../contexts/DataContext";
 import axios from "axios";
 
 export default function Signup() {
-  const {
-    navigate,
-    guestLogin,
-    checkUser,
-    clearState,
-    showPassword,
-    setShowPassword,
-  } = useContext(AuthContext);
+  const { navigate, showPassword, setShowPassword } = useContext(AuthContext);
 
   const { getUsers } = useContext(DataContext);
 
@@ -64,7 +57,7 @@ export default function Signup() {
         localStorage.setItem("user", JSON.stringify(response.data.createdUser));
         navigate("/home");
       } else {
-        alert("Please try again later");
+        alert("Something went wrong, please try again later");
       }
     } catch (err) {
       console.error(err);
@@ -82,6 +75,13 @@ export default function Signup() {
       alert("Your password doesn't match with the confirm password");
     }
   };
+
+  //TO CLEAR STATE ONCE USER HAS SIGNED UP
+
+  const clearState = () => {
+    setNewUser({ username: "", password: "" });
+  };
+
   return (
     <>
       <p className="landing-header-login">SocialNetwork</p>
@@ -182,7 +182,9 @@ export default function Signup() {
           </div>
 
           <div className="btn-container">
-            <button type="submit">Create New Account</button>
+            <button className="signup-button" type="submit">
+              Create New Account
+            </button>
             <p className="link-text" onClick={() => navigate("/login")}>
               Already have an account?
             </p>
