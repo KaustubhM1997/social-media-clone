@@ -6,12 +6,14 @@ import NavBar from "../../components/NavBar";
 import { useContext } from "react";
 import { DataContext } from "../../contexts/DataContext";
 import PostCard from "../../components/PostCard";
+import CreatePost from "../../components/CreatePost";
 export default function Home() {
   const { posts } = useContext(DataContext);
 
   //FUNCTION TO FILTER PEOPLE I'M NOT FOLLOWING
 
   const filteredPosts = posts.filter(({ isFollowing }) => isFollowing === true);
+
   return (
     <>
       {/* NavBar component */}
@@ -24,6 +26,16 @@ export default function Home() {
 
         <div className="explore-container">
           <ul>
+            {/* COMPONENT TO ADD/CREATE POSTS */}
+            <CreatePost />
+
+            <div className="sorting-container">
+              <p>Latest Posts</p>
+              <p>Trending Posts</p>
+            </div>
+
+            {/* POST CARD COMPONENT */}
+
             {filteredPosts.map((item) => (
               <PostCard post={item} />
             ))}
