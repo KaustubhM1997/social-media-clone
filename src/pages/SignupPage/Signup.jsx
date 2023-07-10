@@ -47,7 +47,6 @@ export default function Signup() {
       };
 
       const response = await axios.post(`/api/auth/signup`, data);
-      // console.log(response, "RESPONSE");
 
       if (response.status === 201) {
         getUsers();

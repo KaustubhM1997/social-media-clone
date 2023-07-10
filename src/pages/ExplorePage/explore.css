@@ -2,23 +2,14 @@
 
 .explore-container{
 
-    /* border: 1px solid black; */
     width: 550px;
     margin-top: 1rem;
     display: flex;
     flex-direction: column; 
     flex-wrap: wrap;
-    margin-bottom: 5rem;
-    /* gap: 10rem; */  
+    margin-bottom: 5rem; 
     
 }
-
-/* .lists {
-
-    list-style: none;
-    border: 1px solid red;
-    margin-bottom: 1.5rem;
-} */
 
 .card-container {
 

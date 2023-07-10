@@ -7,10 +7,6 @@
     justify-content: space-between;
     border: 1px solid black;
     padding: 28px;
-    /* position: fixed;
-    top: 0; */
-    /* position: sticky;
-    z-index: 999; */
     border-end-start-radius: 15px;
     background-color: var(--primary-color);
     border: none;
@@ -34,7 +30,6 @@
 
 .side-bar {
 
-    /* border: 1px solid black; */
     min-width: 250px;
     height: 75vh;
     margin-top: 1rem; 
@@ -98,14 +93,6 @@
     object-fit: cover;
     cursor: pointer;
 }
-
-/* .create-post img {
-
-    display: flex;
-    flex-direction: row;
-
-
-} */
 
 .create-post-elements {
 

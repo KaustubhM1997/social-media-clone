@@ -88,7 +88,6 @@ export function Login() {
           </div>
 
           <div className="btn-container">
-            {/* <button onClick={() => navigate("/explore")}>Login</button> */}
             <button
               className="login-btn"
               onClick={(e) => {
@@ -98,7 +97,6 @@ export function Login() {
             >
               Login
             </button>
-            {/* <button onClick={() => navigate("/home")}>Guest Login</button> */}
 
             <button
               onClick={(e) => {

@@ -46,7 +46,6 @@ export const AuthProvider = ({ children }) => {
       const response = await axios.post(`/api/auth/login`, data);
 
       if (response.status === 200) {
-        // console.log(response, "GO!!");
         localStorage.setItem("token", response.data.encodedToken);
         localStorage.setItem("user", JSON.stringify(response.data.foundUser));
         setToken(response.data.encodedToken);
@@ -79,10 +78,7 @@ export const AuthProvider = ({ children }) => {
 
   const handleChange = (e) => {
     const { value, id } = e.target;
-    // console.log(value, id, "searching...");
-    setUser((prevState) => ({ ...prevState, [id]: value }));
-
-    // setUser((previousState) => ({ ...previousState, [id]: value })); //DYNAMIC IDs for username and password
+    setUser((prevState) => ({ ...prevState, [id]: value })); //DYNAMIC IDs for username and password
   };
 
   return (

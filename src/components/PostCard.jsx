@@ -6,10 +6,6 @@ export default function PostCard({ post }) {
   const { bookmarkedPost, removeBookmark, addBookmark } =
     useContext(DataContext);
 
-  // const loggedInUser = JSON.parse(localStorage.getItem("user"));
-
-  // console.log(bookmarkedPost, id, "FIND");
-
   return (
     <>
       <li className="lists" key={_id}>
@@ -57,12 +53,4 @@ export default function PostCard({ post }) {
       </li>
     </>
   );
-}
-
-// (bookmarkPost) => bookmarkPost?_.id === post?_id ? "": ""
-
-{
-  /* <span onClick={() => navigate("/bookmarks")}>
-              <i class="fa-regular fa-bookmark"></i>
-            </span> */
 }
