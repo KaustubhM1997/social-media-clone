@@ -12,6 +12,8 @@ export const AuthProvider = ({ children }) => {
 
   const [loggendInUser, setLoggedInUser] = useState(null); //STATE OF THE LOGGED IN USER
 
+  const [showPassword, setShowPassword] = useState(false); //state to show or don't show password
+
   //FUNCTION FOR GUEST LOGIN and POSTING ON BACKEND
   const guestLogin = async () => {
     try {
@@ -70,8 +72,18 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  // TO CLEAR THE LOGIN FIELDS ONCE LOGGED IN
+  // TO CLEAR THE INPUT FIELDS ONCE THE USER HAS LOGGED IN OR SIGNED UP
   const clearState = () => setUser({ username: "", password: "" });
+
+  //FUNCTION TO HANDLE CHANGE IN INPUT FIELDS
+
+  const handleChange = (e) => {
+    const { value, id } = e.target;
+    // console.log(value, id, "searching...");
+    setUser((prevState) => ({ ...prevState, [id]: value }));
+
+    // setUser((previousState) => ({ ...previousState, [id]: value })); //DYNAMIC IDs for username and password
+  };
 
   return (
     <AuthContext.Provider
@@ -83,6 +95,10 @@ export const AuthProvider = ({ children }) => {
         checkUser,
         loggendInUser,
         setUser,
+        showPassword,
+        setShowPassword,
+        handleChange,
+        clearState,
       }}
     >
       {children}

@@ -4,28 +4,24 @@ import { AuthContext } from "../../contexts/AuthContext";
 import "./Login.css";
 
 export default function Login() {
-  const { navigate, user, setUser, guestLogin, checkUser } =
-    useContext(AuthContext);
+  const {
+    navigate,
+    user,
+    guestLogin,
+    checkUser,
+    showPassword,
+    setShowPassword,
+    handleChange,
+  } = useContext(AuthContext);
 
-  const [showPassword, setShowPassword] = useState(false); //state to show or don't show password
+  //FOR A USER THAT WAS ALREADY LOGGED IN AND DIDN'T CLICK ON THE LOGOUT BUTTON
 
-  //FOR A USER THAT ALREADY LOGGED IN PREVIOUSLY
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
       navigate("/home");
     }
   }, []);
-
-  //FUNCTION TO HANDLE CHANGE IN INPUT FIELDS
-
-  const handleChange = (e) => {
-    const { value, id } = e.target;
-    console.log(value, id, "searching...");
-    setUser((prevState) => ({ ...prevState, [id]: value }));
-
-    // setUser((previousState) => ({ ...previousState, [id]: value })); //DYNAMIC IDs for username and password
-  };
 
   //FUNCTION TO HANDLE GUEST AND NEW USERS TRYING TO LOG IN
 

@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <>
       <nav className="navbar">
-        <p onClick={() => navigate("/home")} className="nav-header">
+        <p onClick={() => navigate("/")} className="nav-header">
           SocialNetwork
         </p>
 

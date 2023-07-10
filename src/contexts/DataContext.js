@@ -55,7 +55,7 @@ export const DataProvider = ({ children }) => {
   }, []);
 
   return (
-    <DataContext.Provider value={{ posts, users }}>
+    <DataContext.Provider value={{ posts, users, getUsers }}>
       {children}
     </DataContext.Provider>
   );
