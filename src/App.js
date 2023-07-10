@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Landing from "./pages/Landing/Landing";
+import Landing from "./pages/LandingPage/Landing.jsx";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
