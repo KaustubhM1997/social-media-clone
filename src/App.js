@@ -2,14 +2,14 @@ import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Landing from "./pages/LandingPage/Landing.jsx";
+import Landing from "./pages/LandingPage/Landing";
 import Home from "./pages/HomePage/Home";
 import Signup from "./pages/SignupPage/Signup";
 import Explore from "./pages/ExplorePage/Explore";
 import Bookmark from "./pages/BookmarkPage/Bookmark";
 import UserProfile from "./pages/UserProfilePage/UserProfile";
 import NotFound from "./pages/NotFoundPage/NotFound";
-import Login from "./pages/LoginPage/login";
+import { Login } from "./pages/LoginPage/Login";
 
 function App() {
   return (

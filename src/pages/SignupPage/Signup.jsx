@@ -47,9 +47,9 @@ export default function Signup() {
       };
 
       const response = await axios.post(`/api/auth/signup`, data);
-      // console.log(response);
+      // console.log(response, "RESPONSE");
 
-      if (response.status === 200) {
+      if (response.status === 201) {
         getUsers();
         alert("User created successfully!");
         clearState();

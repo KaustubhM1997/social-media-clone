@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import "./login.css";
 
-export default function Login() {
+export function Login() {
   const {
     navigate,
     user,
