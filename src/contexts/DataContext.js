@@ -2,7 +2,6 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
 export const DataContext = createContext();
-
 export const DataProvider = ({ children }) => {
   const [posts, setPosts] = useState([]); //STORING ALL POSTS FROM THE BACKEND
   const [users, setUsers] = useState([]); //STORING ALL USERS FROM THE BACKEND

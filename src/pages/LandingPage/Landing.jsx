@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import "./landing.css";
 import { AuthContext } from "../../contexts/AuthContext";
 

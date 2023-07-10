@@ -1,11 +1,13 @@
+import { useContext } from "react";
+
 import "./home.css";
 import SideBar1 from "../../components/SideBar1";
 import SideBar2 from "../../components/SideBar2";
 import NavBar from "../../components/NavBar";
-import { useContext } from "react";
 import { DataContext } from "../../contexts/DataContext";
 import PostCard from "../../components/PostCard";
 import CreatePost from "../../components/CreatePost";
+
 export default function Home() {
   const { posts } = useContext(DataContext);
 

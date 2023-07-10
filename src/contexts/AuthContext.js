@@ -3,7 +3,6 @@ import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
-
 export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState({ username: "", password: "" }); // SETTING INITIAL STATE OF USER TO EMPTY

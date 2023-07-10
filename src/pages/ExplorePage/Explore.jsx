@@ -1,11 +1,9 @@
-import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
+import "./explore.css";
 import NavBar from "../../components/NavBar";
 import SideBar1 from "../../components/SideBar1";
 import SideBar2 from "../../components/SideBar2";
-import "./explore.css";
-
 import { DataContext } from "../../contexts/DataContext";
 import PostCard from "../../components/PostCard";
 

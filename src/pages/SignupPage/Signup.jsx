@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
+import axios from "axios";
+
 import "./signup.css";
 import { AuthContext } from "../../contexts/AuthContext";
 import { DataContext } from "../../contexts/DataContext";
-import axios from "axios";
 
 export default function Signup() {
   const { navigate, showPassword, setShowPassword } = useContext(AuthContext);
