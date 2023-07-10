@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { DataContext } from "../contexts/DataContext";
 
 export default function PostCard({ post }) {
   const { id, content, firstName, lastName, createdAt, avatar } = post;
   const { navigate } = useContext(AuthContext);
+  const { bookmarkedPost, removeBookmark, addBookmark } = useContext(DataContext);
+
+  // const loggedInUser = JSON.parse(localStorage.getItem("user"));
 
   return (
     <>
@@ -33,12 +37,20 @@ export default function PostCard({ post }) {
 
             <i class="fa-regular fa-comment"></i>
             <i class="fa-solid fa-share"></i>
-            <span onClick={() => navigate("/bookmarks")}>
-              <i class="fa-regular fa-bookmark"></i>
-            </span>
+            {bookmarkedPost.find((bookmarkPost) => bookmarkPost?_.id === id) ? (<i className="fa-solid fa-bookmark" onClick={() => removeBookmark(id)}></i>)  : ( <i className="fa-regular fa-bookmark" onClick={() => addBookmark(id)}></i>)}
+
+       
+           
           </div>
         </div>
       </li>
     </>
   );
 }
+
+
+// (bookmarkPost) => bookmarkPost?_.id === post?_id ? "": ""
+
+ {/* <span onClick={() => navigate("/bookmarks")}>
+              <i class="fa-regular fa-bookmark"></i>
+            </span> */}

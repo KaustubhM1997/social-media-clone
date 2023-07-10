@@ -4,9 +4,9 @@ import { createContext, useEffect, useState } from "react";
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [posts, setPosts] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [bookmarked, setBookmarked] = useState([]); // STATE TO STORE AND SET BOOKMARKS OF USERS
+  const [posts, setPosts] = useState([]); //STORING ALL POSTS FROM THE BACKEND
+  const [users, setUsers] = useState([]); //STORING ALL USERS FROM THE BACKEND
+  const [bookmarkedPost, setBookmarkedPost] = useState([]); // TO STORE BOOKMARKED POSTS OF LOGGED IN USERS
 
   //FETCHING POSTS FROM BACKEND
   const getPosts = async () => {
@@ -34,14 +34,61 @@ export const DataProvider = ({ children }) => {
     }
   };
 
-  //FETCHING ALL ADDED BOOKMARKS FROM THE BACKEND
+  //FETCHING ALL BOOKMARKS FROM THE BACKEND API
 
   const getBookmarks = async () => {
     try {
-      const bookmarkData = await axios(`/api/users/bookmark`);
+      const bookmarkData = await axios(`/api/users/bookmark`, {
+        headers: {
+          authorization: token,
+        },
+      });
 
-      if (bookmarkData.json().status === 200) {
-        console.log(bookmarkData.json(), "bookmark");
+      if (bookmarkData.status === 200) {
+        setBookmarkedPost(bookmarkData.data.bookmarks);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  //FUNCTION TO LET USERS BOOKMARK POSTS
+
+  const addBookmark = async (postId) => {
+    try {
+      const response = await axios.post(
+        `/api/users/bookmark/${postId}`, //THE BOOKMARK GETS STORED IN THE BACKEND HERE
+        {},
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        getBookmarks(); //FUNCTION TO FETCH ALL BOOKMARKS FROM BACKEND
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  //FUNCTION TO LET USERS REMOVE POSTS FROM BOOKMARK
+
+  const removeBookmark = async (postId) => {
+    try {
+      const response = await axios.post(
+        `/api/users/remove-bookmark/${postId}`,
+        {},
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+      if (response.status === 200) {
+        getBookmarks();
       }
     } catch (err) {
       console.error(err);
@@ -51,11 +98,22 @@ export const DataProvider = ({ children }) => {
   useEffect(() => {
     getPosts();
     getUsers();
-    // getBookmarks();
+    getBookmarks();
   }, []);
 
+  const token = localStorage.getItem("token");
+
   return (
-    <DataContext.Provider value={{ posts, users, getUsers }}>
+    <DataContext.Provider
+      value={{
+        posts,
+        users,
+        getUsers,
+        addBookmark,
+        bookmarkedPost,
+        removeBookmark,
+      }}
+    >
       {children}
     </DataContext.Provider>
   );
