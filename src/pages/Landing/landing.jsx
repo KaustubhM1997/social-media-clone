@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "./Landing.css";
+import "./landing.css";
 import { AuthContext } from "../../contexts/AuthContext";
 
 export default function Landing() {
