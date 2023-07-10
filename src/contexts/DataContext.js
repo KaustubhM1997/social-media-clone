@@ -55,6 +55,7 @@ export const DataProvider = ({ children }) => {
   //FUNCTION TO LET USERS BOOKMARK POSTS
 
   const addBookmark = async (postId) => {
+    // console.log(postId, "HI");
     try {
       const response = await axios.post(
         `/api/users/bookmark/${postId}`, //THE BOOKMARK GETS STORED IN THE BACKEND HERE
@@ -67,6 +68,7 @@ export const DataProvider = ({ children }) => {
       );
 
       if (response.status === 200) {
+        // console.log(response, "THERE");
         getBookmarks(); //FUNCTION TO FETCH ALL BOOKMARKS FROM BACKEND
       }
     } catch (err) {

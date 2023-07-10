@@ -13,6 +13,8 @@ export default function Bookmark() {
 
   //TO SHOW ALL INFO WE NEED TO MAP BOOKMARK ARRAY ONTO THE POSTS ARRAY BY ID, AS THE POSTS BACKEND ARRAY HAS ALL THE ELEMENTS
 
+  console.log(onlyBookmarkedPosts, "SEE");
+
   useEffect(() => {
     let filterArray = [];
     for (let i = 0; i < bookmarkedPost.length; i++) {
@@ -36,7 +38,7 @@ export default function Bookmark() {
         <div className="explore-container">
           <ul>
             {onlyBookmarkedPosts?.length > 0
-              ? posts.map((item) => <PostCard post={item} />)
+              ? onlyBookmarkedPosts.map((item) => <PostCard post={item} />)
               : ""}
           </ul>
         </div>
