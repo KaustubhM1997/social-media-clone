@@ -3,13 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Landing from "./pages/LandingPage/Landing.jsx";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
-import Signup from "./pages/Signup/Signup";
-import Explore from "./pages/Explore/Explore";
-import Bookmark from "./pages/Bookmark/Bookmark";
-import UserProfile from "./pages/UserProfile/UserProfile";
-import NotFound from "./pages/NotFound/NotFound";
+import Home from "./pages/HomePage/Home";
+import Signup from "./pages/SignupPage/Signup";
+import Explore from "./pages/ExplorePage/Explore";
+import Bookmark from "./pages/BookmarkPage/Bookmark";
+import UserProfile from "./pages/UserProfilePage/UserProfile";
+import NotFound from "./pages/NotFoundPage/NotFound";
+import Login from "./pages/LoginPage/login";
 
 function App() {
   return (
