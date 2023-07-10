@@ -14,13 +14,23 @@
    
 } */
 
+.landing-container {
+    display: flex;
+}
+
+.landing-container img {
+
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
 .info-container {
     display: flex;
     flex-direction: column;
 
     border: 1px solid black;
     height: 100vh;
-    max-width: 650px;
+    width: 650px;
     background-color: var(--secondary-color);
     
 

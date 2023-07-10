@@ -1,10 +1,8 @@
 import { useContext } from "react";
-import { AuthContext } from "../contexts/AuthContext";
 import { DataContext } from "../contexts/DataContext";
 
 export default function PostCard({ post }) {
   const { _id, content, firstName, lastName, createdAt, avatar } = post;
-  const { navigate } = useContext(AuthContext);
   const { bookmarkedPost, removeBookmark, addBookmark } =
     useContext(DataContext);
 
