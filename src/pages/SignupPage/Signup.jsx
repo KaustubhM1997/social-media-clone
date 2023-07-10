@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import "./Signup.css";
+import "./signup.css";
 import { AuthContext } from "../../contexts/AuthContext";
 import { DataContext } from "../../contexts/DataContext";
 import axios from "axios";

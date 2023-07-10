@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 
 import { AuthContext } from "../../contexts/AuthContext";
-import "./Login.css";
+import "./login.css";
 
 export default function Login() {
   const {
